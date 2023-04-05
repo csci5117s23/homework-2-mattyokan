@@ -1,0 +1,74 @@
+@import "theme";
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  background: $theme-primary;
+  color: $theme-on-primary;
+
+  padding: 16px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .brand a {
+    font-weight: 600;
+    color: $theme-on-primary;
+    text-decoration: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & a {
+      margin: 0 8px;
+      color: inherit;
+      text-decoration: none;
+      transition: all ease-in-out 0.1s;
+
+      &:hover {
+        color: $theme-primary-container;
+        transform: scale(1.025);
+      }
+
+      &.active {
+        color: $theme-primary-container;
+      }
+    }
+  }
+
+  .search {
+    background: $theme-secondary-container;
+    color: $theme-on-secondary-container;
+    padding: 8px;
+  }
+}
+
+.pageContent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.sidebar {
+  background: $theme-secondary-container;
+  color: $theme-on-secondary-container;
+
+  padding: 16px;
+}
+
+.main {
+  background: $theme-background;
+  color: $theme-on-background;
+
+  flex-grow: 1;
+  padding: 16px;
+}
