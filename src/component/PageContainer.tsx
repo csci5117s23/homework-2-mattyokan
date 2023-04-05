@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import {ReactNode, useState} from "react";
 import Head from "next/head";
 import {Inter} from "next/font/google";
 import styles from '@/styles/PageContainer.module.scss';
@@ -14,6 +14,7 @@ const inter = Inter({subsets: ['latin']})
 
 
 export default function PageContainer(props: PageContainerProps) {
+    const [expanded, setExpanded] = useState(false);
     const router = useRouter();
     const nav = [
         {
@@ -33,6 +34,11 @@ export default function PageContainer(props: PageContainerProps) {
             <div className={`${styles.pageContainer} ${inter.className}`}>
                 <div className={styles.navbar}>
                     <div className={styles.brand}>
+                        <button className={styles.hamburger} onClick={() => {
+                            setExpanded(!expanded)
+                        }}>
+                            Toggle Sidebar
+                        </button>
                         <Link href={`/`}>Taskflow</Link>
                     </div>
                     <div className={styles.navigation}>
@@ -45,7 +51,7 @@ export default function PageContainer(props: PageContainerProps) {
                     </div>
                 </div>
                 <div className={styles.pageContent}>
-                    <aside className={styles.sidebar}>
+                    <aside className={`${styles.sidebar} ${expanded ? styles.active : ""}`}>
                         Sidebar
                     </aside>
                     <main className={styles.main}>

@@ -50,19 +50,43 @@
     color: $theme-on-secondary-container;
     padding: 8px;
   }
+
+  .hamburger {
+    background: $theme-secondary-container;
+    color: $theme-on-secondary-container;
+    border: 0;
+
+    @media (min-width: 1250px) {
+      display: none;
+    }
+  }
 }
 
 .pageContent {
   display: flex;
   flex-direction: row;
   height: 100%;
+
+  @media (max-width: 1250px) {
+    flex-direction: column;
+  }
 }
 
 .sidebar {
   background: $theme-secondary-container;
   color: $theme-on-secondary-container;
+  display: none;
 
   padding: 16px;
+  min-width: 400px;
+
+  &.active {
+    display: inherit;
+  }
+
+  @media(min-width: 1251px) {
+    display: inherit;
+  }
 }
 
 .main {
