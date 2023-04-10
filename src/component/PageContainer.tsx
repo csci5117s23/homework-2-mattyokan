@@ -5,6 +5,7 @@ import styles from '@/styles/PageContainer.module.scss';
 import Link from "next/link";
 import {router} from "next/client";
 import {useRouter} from "next/router";
+import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
 
 interface PageContainerProps {
     children: ReactNode
@@ -48,6 +49,23 @@ export default function PageContainer(props: PageContainerProps) {
                     </div>
                     <div className={styles.search}>
                         Search
+                    </div>
+                    <div className={styles.user}>
+                        <SignedIn>
+
+                            {/* Mount the UserButton component */}
+
+                            <UserButton />
+
+                        </SignedIn>
+
+                        <SignedOut>
+
+                            {/* Signed out users get sign in button */}
+
+                            <SignInButton />
+
+                        </SignedOut>
                     </div>
                 </div>
                 <div className={styles.pageContent}>

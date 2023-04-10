@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import Link from "next/link";
 
 export default function Home() {
-    const [api] = useCodeHooks()
+    const { api, deps } = useCodeHooks()
     const [state, setState] = useState()
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function Home() {
             setState(json)
         })
             .then()
-    }, [])
+    }, [...deps])
     return (
         <PageContainer>
             Welcome to the application
