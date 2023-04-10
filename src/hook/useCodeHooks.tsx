@@ -3,7 +3,7 @@ import {array} from "yup";
 
 interface ApiHook {
     api: CodehooksEndpoints
-    deps: array[any]
+    deps: any
 }
 
 interface CodehooksEndpoints {
