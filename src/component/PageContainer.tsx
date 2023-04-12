@@ -5,7 +5,7 @@ import styles from '@/styles/PageContainer.module.scss';
 import Link from "next/link";
 import {router} from "next/client";
 import {useRouter} from "next/router";
-import {SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
+import {RedirectToSignIn, SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
 
 interface PageContainerProps {
     children: ReactNode
@@ -29,54 +29,60 @@ export default function PageContainer(props: PageContainerProps) {
     ]
     return (
         <>
-            <Head>
-                <title>Taskflow</title>
-            </Head>
-            <div className={`${styles.pageContainer} ${inter.className}`}>
-                <div className={styles.navbar}>
-                    <div className={styles.brand}>
-                        <button className={styles.hamburger} onClick={() => {
-                            setExpanded(!expanded)
-                        }}>
-                            Toggle Sidebar
-                        </button>
-                        <Link href={`/`}>Taskflow</Link>
+            <SignedIn>
+                <Head>
+                    <title>Taskflow</title>
+                </Head>
+                <div className={`${styles.pageContainer} ${inter.className}`}>
+                    <div className={styles.navbar}>
+                        <div className={styles.brand}>
+                            <button className={styles.hamburger} onClick={() => {
+                                setExpanded(!expanded)
+                            }}>
+                                Toggle Sidebar
+                            </button>
+                            <Link href={`/`}>Taskflow</Link>
+                        </div>
+                        <div className={styles.navigation}>
+                            {nav.map((entry) => {
+                                return (<Link className={entry.path === router.pathname ? styles.active : ""}
+                                              key={entry.path} href={entry.path}>{entry.name}</Link>)
+                            })}
+                        </div>
+                        <div className={styles.search}>
+                            Search
+                        </div>
+                        <div className={styles.user}>
+                            <SignedIn>
+
+                                {/* Mount the UserButton component */}
+
+                                <UserButton/>
+
+                            </SignedIn>
+
+                            <SignedOut>
+
+                                {/* Signed out users get sign in button */}
+
+                                <SignInButton/>
+
+                            </SignedOut>
+                        </div>
                     </div>
-                    <div className={styles.navigation}>
-                        {nav.map((entry) => {
-                            return (<Link className={entry.path === router.pathname ? styles.active : ""} key={entry.path} href={entry.path}>{entry.name}</Link>)
-                        })}
-                    </div>
-                    <div className={styles.search}>
-                        Search
-                    </div>
-                    <div className={styles.user}>
-                        <SignedIn>
-
-                            {/* Mount the UserButton component */}
-
-                            <UserButton />
-
-                        </SignedIn>
-
-                        <SignedOut>
-
-                            {/* Signed out users get sign in button */}
-
-                            <SignInButton />
-
-                        </SignedOut>
+                    <div className={styles.pageContent}>
+                        <aside className={`${styles.sidebar} ${expanded ? styles.active : ""}`}>
+                            Sidebar
+                        </aside>
+                        <main className={styles.main}>
+                            {props.children}
+                        </main>
                     </div>
                 </div>
-                <div className={styles.pageContent}>
-                    <aside className={`${styles.sidebar} ${expanded ? styles.active : ""}`}>
-                        Sidebar
-                    </aside>
-                    <main className={styles.main}>
-                        {props.children}
-                    </main>
-                </div>
-            </div>
+            </SignedIn>
+            <SignedOut>
+                <RedirectToSignIn />
+            </SignedOut>
         </>
     )
 }

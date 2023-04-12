@@ -1,0 +1,16 @@
+.signInContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('/bg-pattern.webp');
+  background-repeat: repeat;
+
+  .header {
+    background-color: rgba(255, 255, 255);
+    padding: 8px;
+    border-radius: 16px;
+  }
+}
