@@ -1,16 +1,11 @@
-import {crudlify} from 'codehooks-crudlify'
-import { date, object, string, number} from 'yup';
-import {app, Datastore} from 'codehooks-js'
+import {Datastore} from 'codehooks-js'
 import {randomUUID} from "crypto";
 
-export async function getTasks(userId, query) {
+export async function queryTasks(userId, query) {
     const db = await Datastore.open();
+    const data = await getUserData(db, userId)
 
-    const data = await db.get(userId);
-
-    if(!data || !data.tasks) return []
-
-    return Array.from(data.tasks.values())
+    return Array.from(Object.values(data.tasks))
         .filter((task) => {
             return matchCategory(query, task) && matchStatus(query, task) && matchSearchQuery(query, task)
         })
@@ -18,54 +13,63 @@ export async function getTasks(userId, query) {
 
 export async function updateTask(userId, taskId, updateClosure) {
     const db = await Datastore.open();
-
-    const data = await db.get(userId)
-
-    if(!data || !data.tasks) return { error: `User data for UID ${userId} not found.`}
-
-    const task = data.tasks.get(taskId)
-
-    if(!task) return { error: `Task ${taskId} not found in user ${userId} data.`}
-
-    const updated = updateClosure(task)
-
-    data.tasks.set(taskId, updated)
-
-    await db.set(userId, task)
-    // TODO: Proper get/set error handling
-
-    return { success: "Task updated." }
+    const data = await getUserData(db, userId);
+    const task = data.tasks ? data.tasks[taskId] : null
+    if(!task) {
+        return {error: "No task found with that ID."}
+    } else {
+        data.tasks[taskId] = await updateClosure(task)
+        return { success: "Task updated." }
+    }
 }
 
 export async function createTask(userId, name, description, category, status) {
     const db = await Datastore.open();
-    const data = await db.get(userId);
-    if(!data || !data.tasks) return { error: `User data for UID ${userId} not found.`}
+    await updateUserData(db, userId, (data) => {
+        const id = randomUUID()
 
-    const id = randomUUID()
-
-    const task = {
-        id: id,
-        name: name,
-        description: description,
-        category: category,
-        status: status
-    }
-
-    data.tasks.set(id, task)
-
-    await db.set(userId, data)
-    // TODO: Error handling
+        data.tasks[id] = {
+            id: id,
+            name: name,
+            description: description,
+            category: category,
+            status: status
+        }
+        return data
+    })
     return { success: "Task created." }
 }
 
 export async function deleteTask(userId, taskId) {
     const db = await Datastore.open();
-    const data = await db.get(userId);
-    if(!data || !data.tasks) return { error: `User data for UID ${userId} not found.`}
-    data.tasks.delete(taskId)
-    await db.set(userId, data)
-    return { success: "Task deleted." }
+    await updateUserData(db, userId, (data) => {
+        data.tasks[taskId] = undefined
+        return data
+    })
+    return { success: "Task deleted" }
+}
+
+export async function createCategory(userId, name) {
+    const db = await Datastore.open();
+    await updateUserData(db, userId, (data) => {
+        const id = randomUUID()
+
+        data.categories[id] = {
+            id: id,
+            name: name,
+        }
+        return data
+    })
+    return { success: "Task created" }
+}
+
+export async function deleteCategory(userId, categoryId) {
+    const db = await Datastore.open();
+    await updateUserData(db, userId, (data) => {
+        data.categories[categoryId] = undefined
+        return data
+    })
+    return { success: "Category deleted" }
 }
 
 function matchCategory(query, task) {
@@ -93,5 +97,38 @@ function matchSearchQuery(query, task) {
         })
         const result = idx.search(query.query)
         return result.length() > 0
+    } else {
+        return true
     }
+}
+
+async function getOrDefault(db, key, closure) {
+    try {
+        return await db.getOne('users', key)
+    } catch (e) {
+        console.log("Get failed: ", e)
+        return closure()
+    }
+}
+
+export async function getUserData(db, userId) {
+    return await getOrDefault(db, userId, () => ({
+        id: userId,
+        tasks: new Map(),
+        categories: new Map()
+    }))
+}
+
+async function setUserData(db, userId, data) {
+    try {
+        await db.replaceOne('users', data.id, data);
+    } catch(e) {
+        console.log("Set failed: ", e)
+    }
+}
+
+async function updateUserData(db, userId, closure) {
+    const data = await getUserData(db, userId)
+    const newData = await closure(data)
+    return await setUserData(db, userId, newData)
 }

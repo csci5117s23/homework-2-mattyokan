@@ -1,4 +1,4 @@
-interface TaskQuery {
+interface TaskFilter {
     /**
      * Require a certain category ID.
      *

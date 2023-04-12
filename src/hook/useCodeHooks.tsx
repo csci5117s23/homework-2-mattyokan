@@ -17,6 +17,8 @@ export function useCodeHooks(): ApiHook {
     const [baseUrl, apiKey] = [process.env.NEXT_PUBLIC_API_ENDPOINT_BASE, process.env.NEXT_PUBLIC_API_KEY]
     const {isLoaded, userId, getToken} = useAuth();
     const fetchAuth = async () => userId ? {'Authorization': 'Bearer ' + await getToken({template: "codehooks"})} : {}
+    fetchAuth()
+        .then(auth => console.log("User ID is ", userId, " with auth ", auth))
     const fullUrl = (url: string): string => `${baseUrl}${url}`
     const applyProps = async (props: any): Promise<any> => ({headers: {"x-apikey": apiKey}, ...props, ...(await fetchAuth())})
     return {

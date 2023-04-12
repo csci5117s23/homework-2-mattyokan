@@ -1,0 +1,108 @@
+[
+  [
+    "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+    {
+      "1877635b3d3-ytdu6dnu1s4xza": {
+        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+        "tasks": {},
+        "categories": {},
+        "_id": "1877635b3d3-ytdu6dnu1s4xza"
+      },
+      "18776361326-ew04mgeobsbx6g": {
+        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+        "tasks": {},
+        "categories": {},
+        "_id": "18776361326-ew04mgeobsbx6g"
+      }
+    }
+  ],
+  [
+    "_defaultkvspace",
+    {
+      "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt": {
+        "val": {
+          "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+          "tasks": {},
+          "categories": {}
+        }
+      }
+    }
+  ],
+  [
+    "users",
+    {
+      "187763f7d52-jt52j51vxxjys3": {
+        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+        "tasks": {},
+        "categories": {},
+        "_id": "187763f7d52-jt52j51vxxjys3"
+      },
+      "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt": {
+        "_id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
+        "tasks": {
+          "b230dd7f-69bf-4884-9355-3cdb74e23ed9": {
+            "id": "b230dd7f-69bf-4884-9355-3cdb74e23ed9",
+            "name": "Example Task",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "875a143b-fc78-4009-a7b4-ed807b56b47c": {
+            "id": "875a143b-fc78-4009-a7b4-ed807b56b47c",
+            "name": "Example Task",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "5128c971-dfdf-4480-9c11-2adc5ca46111": {
+            "id": "5128c971-dfdf-4480-9c11-2adc5ca46111",
+            "name": "Example Task",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "d40e641a-f944-44f7-835b-26d787203742": {
+            "id": "d40e641a-f944-44f7-835b-26d787203742",
+            "name": "Example Task",
+            "description": "",
+            "category": null,
+            "status": false
+          }
+        },
+        "categories": {
+          "b6b67b19-4c7c-4ee4-9574-bbc7c2ce9158": {
+            "id": "b6b67b19-4c7c-4ee4-9574-bbc7c2ce9158",
+            "name": "Homework"
+          }
+        }
+      }
+    }
+  ],
+  [
+    "_dbmetadata",
+    {}
+  ],
+  [
+    "vierw",
+    {
+      "187764dce6f-nmm3y51gwawjng": {
+        "name": "Example Task",
+        "_id": "187764dce6f-nmm3y51gwawjng"
+      }
+    }
+  ],
+  [
+    "view",
+    {
+      "187764dd1a0-k7ui4lzouonslq": {
+        "name": "Example Task",
+        "_id": "187764dd1a0-k7ui4lzouonslq"
+      },
+      "187764dd747-xdcbrxidk0hn6q": {
+        "name": "Example Task",
+        "_id": "187764dd747-xdcbrxidk0hn6q"
+      }
+    }
+  ]
+]
