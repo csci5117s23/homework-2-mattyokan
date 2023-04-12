@@ -30,6 +30,27 @@ app.get('/', (req, res) => {
   })
 })
 
+app.post('/create/', async (req, res) => {
+  // create new todo
+})
+
+app.get('/view/:type', (req, res) => {
+  // View all/done/incomplete
+  // Optional category filter
+})
+
+app.post('/complete', (req, res) => {
+  // mark todo as complete
+})
+
+app.post('/category/create', (req, res) => {
+  // create new category
+})
+
+app.post('/category/delete', (req, res) => {
+  // delete a category
+})
+
 // Use Crudlify to create a REST API for any collection
 crudlify(app)
 
