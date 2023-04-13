@@ -58,9 +58,10 @@ export async function createCategory(userId, name) {
             id: id,
             name: name,
         }
+        console.log("Setting categories to ", data.categories)
         return data
     })
-    return { success: "Task created" }
+    return (await getUserData(db, userId)).categories
 }
 
 export async function deleteCategory(userId, categoryId) {
@@ -107,6 +108,8 @@ async function getOrDefault(db, key, closure) {
         return await db.getOne('users', key)
     } catch (e) {
         console.log("Get failed: ", e)
+        const data = closure()
+        console.log("Returning user data ", data)
         return closure()
     }
 }
@@ -114,8 +117,8 @@ async function getOrDefault(db, key, closure) {
 export async function getUserData(db, userId) {
     return await getOrDefault(db, userId, () => ({
         id: userId,
-        tasks: new Map(),
-        categories: new Map()
+        tasks: {},
+        categories: {}
     }))
 }
 
@@ -123,7 +126,10 @@ async function setUserData(db, userId, data) {
     try {
         await db.replaceOne('users', data.id, data);
     } catch(e) {
-        console.log("Set failed: ", e)
+        const result = await db.insertOne('users', {
+            ...data,
+            _id: userId
+        })
     }
 }
 

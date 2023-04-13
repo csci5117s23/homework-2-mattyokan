@@ -71,23 +71,66 @@
           }
         },
         "categories": {
-          "87e82b17-f06a-4058-bdad-2fa56edf16df": {
-            "id": "87e82b17-f06a-4058-bdad-2fa56edf16df",
-            "name": "Testing"
-          },
-          "9fff4224-1fe9-4914-92d8-9405e49c8497": {
-            "id": "9fff4224-1fe9-4914-92d8-9405e49c8497",
-            "name": "Homework"
-          },
-          "96351b3a-ed4c-487c-b165-a4ffd35c835a": {
-            "id": "96351b3a-ed4c-487c-b165-a4ffd35c835a",
+          "1812ac4e-1021-4d72-8834-79d3182b97cc": {
+            "id": "1812ac4e-1021-4d72-8834-79d3182b97cc",
             "name": "Groceries"
           },
-          "021d4bf5-d7a1-4f23-885c-d3243bbbec9b": {
-            "id": "021d4bf5-d7a1-4f23-885c-d3243bbbec9b",
+          "05cdd09d-5db0-4ee8-8a92-db6f2dd06d72": {
+            "id": "05cdd09d-5db0-4ee8-8a92-db6f2dd06d72",
+            "name": "Chores"
+          },
+          "5bb34fa1-25fc-46d1-bacd-36039b820297": {
+            "id": "5bb34fa1-25fc-46d1-bacd-36039b820297",
+            "name": "Homework"
+          },
+          "32c0a3f2-d04c-4473-9068-6265172196ef": {
+            "id": "32c0a3f2-d04c-4473-9068-6265172196ef",
+            "name": "testing"
+          },
+          "a76a1e39-4d45-45f7-851b-4e65934a4f6d": {
+            "id": "a76a1e39-4d45-45f7-851b-4e65934a4f6d",
+            "name": "test 2"
+          },
+          "117b5c05-2e14-4d2e-bac3-c129a3f71b55": {
+            "id": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
             "name": "Music"
+          },
+          "e0718577-7005-4625-b424-484080f73c94": {
+            "id": "e0718577-7005-4625-b424-484080f73c94",
+            "name": "example"
+          },
+          "c5c3e1de-3cfe-4da9-80a7-24f965a86a9b": {
+            "id": "c5c3e1de-3cfe-4da9-80a7-24f965a86a9b",
+            "name": "Another example"
+          },
+          "8a99f759-c931-4bed-a6de-d0a0dc6acbb9": {
+            "id": "8a99f759-c931-4bed-a6de-d0a0dc6acbb9",
+            "name": "Yet another example"
           }
         }
+      },
+      "1877b575c4a-nfvlsi9fjysp5b": {
+        "id": "user_2ONVj123TkDe2t0Gsbz30jKZL0o",
+        "tasks": {},
+        "categories": {
+          "eef5a043-004b-44f9-906d-1e097237575a": {
+            "id": "eef5a043-004b-44f9-906d-1e097237575a",
+            "name": "test"
+          }
+        },
+        "_id": "1877b575c4a-nfvlsi9fjysp5b"
+      },
+      "user_2ONVj123TkDe2t0Gsbz30jKZL0o": {
+        "id": "user_2ONVj123TkDe2t0Gsbz30jKZL0o",
+        "tasks": {},
+        "categories": {},
+        "_id": "user_2ONVj123TkDe2t0Gsbz30jKZL0o"
+      },
+      "user_2ONWb1oc4JnETvlRklTiyi2Qsod": {
+        "id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod",
+        "tasks": {},
+        "categories": {},
+        "_id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod"
       }
     }
   ],

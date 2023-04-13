@@ -42,7 +42,7 @@ export default function PageContainer(props: PageContainerProps) {
                             }}>
                                 Toggle Sidebar
                             </button>
-                            <Link href={`/`}>Taskflow</Link>
+                            <Link href={`/todos`}>Taskflow</Link>
                         </div>
                         <div className={styles.navigation}>
                             {nav.map((entry) => {
