@@ -16,6 +16,7 @@ export async function queryTasks(userId, query) {
 export async function updateTask(userId, taskId, updateClosure) {
     const db = await Datastore.open();
     const data = await getUserData(db, userId);
+    console.log("User data is ", data)
     const task = data.tasks ? data.tasks[taskId] : null
     if(!task) {
         return {error: "No task found with that ID."}
@@ -37,8 +38,6 @@ export async function createTask(userId, name, description, category, status) {
     }
 
     await updateUserData(db, userId, (data) => {
-        const id = randomUUID()
-
         data.tasks[id] = task
         return data
     })
@@ -83,7 +82,11 @@ function matchCategory(query, task) {
 }
 
 function matchStatus(query, task) {
-    return !(query.requiredStatus && task.status !== query.requiredStatus);
+    if(typeof query.requiredStatus === "undefined") {
+        return true
+    } else {
+        return query.requiredStatus === task.status;
+    }
 }
 
 /**

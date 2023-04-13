@@ -32,7 +32,18 @@ export default function TaskView(props: TasksProps) {
             <h1>{props.title}</h1>
             <div>
                 {tasks ? tasks.map(task => (
-                    <TaskCard task={task} key={task.id}/>
+                    <TaskCard task={task} key={task.id} toggleComplete={() => {
+                        const taskData = { ...task }
+                        taskData.status = !task.status
+                        api.fetch("/updateTask", async (res) => {
+                            const json = await res.json()
+                            if(!json.error) {
+                                const newTasks = tasks.filter(t => t.id !== task.id)
+                                newTasks.push(json)
+                                setTasks(newTasks)
+                            }
+                        }, "POST", taskData)
+                    }}/>
                 )) : <Skeleton count={5}/>}
             </div>
             {props.filter?.requiredStatus !== true && (<div>

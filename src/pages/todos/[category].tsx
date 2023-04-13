@@ -12,7 +12,7 @@ export default function CategoryView() {
     const name = currentCategory?.name ?? "Loading"
     return (
         <PageContainer>
-            {currentCategory ? (<TaskView title={`Completed Tasks in ${name}`} filter={{
+            {currentCategory ? (<TaskView title={`Incomplete Tasks in ${name}`} filter={{
                 requiredStatus: false,
                 requiredCategory: currentCategory?.id
             }} category={currentCategory} />) : (<Skeleton count={10} />)}

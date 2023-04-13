@@ -173,13 +173,37 @@
             "description": "",
             "category": null,
             "status": true
+          },
+          "73d0a87f-d697-4cc3-b130-cafc8ee41d19": {
+            "id": "73d0a87f-d697-4cc3-b130-cafc8ee41d19",
+            "name": "Assignment 6",
+            "description": "",
+            "category": null,
+            "status": true
+          },
+          "f496e69d-a095-4410-a1eb-b076a7e050cd": {
+            "id": "f496e69d-a095-4410-a1eb-b076a7e050cd",
+            "name": "Assignment 6",
+            "description": "",
+            "category": null,
+            "status": true
+          },
+          "5dce6e89-f9b4-4050-aa8c-96741977d831": {
+            "id": "5dce6e89-f9b4-4050-aa8c-96741977d831",
+            "name": "Assignment 6",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "4d23e160-c49e-42bf-8aac-8c771ad5f0c9": {
+            "id": "4d23e160-c49e-42bf-8aac-8c771ad5f0c9",
+            "name": "Assignment 7",
+            "description": "",
+            "category": null,
+            "status": false
           }
         },
         "categories": {
-          "5bb34fa1-25fc-46d1-bacd-36039b820297": {
-            "id": "5bb34fa1-25fc-46d1-bacd-36039b820297",
-            "name": "Homework"
-          },
           "32c0a3f2-d04c-4473-9068-6265172196ef": {
             "id": "32c0a3f2-d04c-4473-9068-6265172196ef",
             "name": "testing"

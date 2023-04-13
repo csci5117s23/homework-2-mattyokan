@@ -1,0 +1,39 @@
+@import "theme";
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: $theme-primary-container;
+  padding: 8px;
+  max-width: 100%;
+
+
+  .status {
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .name {
+      font-weight: 600;
+    }
+    .description {
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.complete {
+  .name {
+    text-decoration: line-through;
+  }
+  .description {
+    text-decoration: line-through;
+  }
+}
