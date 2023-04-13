@@ -62,6 +62,7 @@ app.post('/create', async (req, res) => {
 })
 
 app.get('/tasks', async (req, res) => {
+    console.log("Tasks req is ", req)
     const filter = (req.query.filter) ? JSON.parse(req.query.filter) : {}
     const userId = req?.user_token?.sub
     if (!userId) {

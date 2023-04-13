@@ -3,25 +3,19 @@ import {useEffect, useState} from "react";
 import Skeleton from "react-loading-skeleton";
 import {inspect} from "util";
 import styles from '@/styles/CategorySidebar.module.scss';
-import CategoryEntry from "@/component/CategoryEntry";
+import CategoryEntry from "@/component/category/CategoryEntry";
 import {useRouter} from "next/router";
+import {useCategories} from "@/hook/useCategoryName";
 
 
 export default function CategorySidebar() {
 
     const {api, deps} = useCodeHooks()
-    const [categories, setCategories] = useState<object>()
+    const [categories, setCategories] = useCategories();
     const [newCategory, setNewCategory] = useState<string>("")
     const {asPath} = useRouter();
     const basePath = asPath.split("/")[1]
 
-    useEffect(() => {
-        api.fetch("/categories", async (res) => {
-            const json = await res.json()
-            setCategories(json)
-        })
-            .then()
-    }, [...deps])
 
     const addNewCategory = (e) => {
         e.preventDefault()

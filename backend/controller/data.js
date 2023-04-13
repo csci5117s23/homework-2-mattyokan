@@ -5,6 +5,8 @@ export async function queryTasks(userId, query) {
     const db = await Datastore.open();
     const data = await getUserData(db, userId)
 
+    console.log("Querying tasks with query ", query)
+
     return Array.from(Object.values(data.tasks))
         .filter((task) => {
             return matchCategory(query, task) && matchStatus(query, task) && matchSearchQuery(query, task)
@@ -25,19 +27,22 @@ export async function updateTask(userId, taskId, updateClosure) {
 
 export async function createTask(userId, name, description, category, status) {
     const db = await Datastore.open();
+    const id = randomUUID()
+    const task = {
+        id: id,
+        name: name,
+        description: description,
+        category: category,
+        status: status
+    }
+
     await updateUserData(db, userId, (data) => {
         const id = randomUUID()
 
-        data.tasks[id] = {
-            id: id,
-            name: name,
-            description: description,
-            category: category,
-            status: status
-        }
+        data.tasks[id] = task
         return data
     })
-    return { success: "Task created." }
+    return task
 }
 
 export async function deleteTask(userId, taskId) {

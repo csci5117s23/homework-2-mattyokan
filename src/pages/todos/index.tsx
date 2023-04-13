@@ -1,9 +1,12 @@
 import PageContainer from "@/component/PageContainer";
+import TaskView from "@/component/task/TaskView";
 
 export default function AllTodos() {
     return (
         <PageContainer>
-            All Todos
+            <TaskView title={`Incomplete Tasks`} filter={{
+                requiredStatus: false
+            }}/>
         </PageContainer>
     )
 }

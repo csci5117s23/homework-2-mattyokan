@@ -6,7 +6,7 @@ import Link from "next/link";
 import {router} from "next/client";
 import {useRouter} from "next/router";
 import {RedirectToSignIn, SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
-import CategorySidebar from "@/component/CategorySidebar";
+import CategorySidebar from "@/component/category/CategorySidebar";
 
 interface PageContainerProps {
     children: ReactNode

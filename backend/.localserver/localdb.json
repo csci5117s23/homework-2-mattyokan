@@ -68,17 +68,114 @@
             "description": "",
             "category": null,
             "status": false
+          },
+          "6328097c-cf51-4bdb-9f6b-a63c56e428b1": {
+            "id": "6328097c-cf51-4bdb-9f6b-a63c56e428b1",
+            "name": "Another Task",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "1640f2fc-68cc-4f95-a70f-d2efa21ced46": {
+            "id": "1640f2fc-68cc-4f95-a70f-d2efa21ced46",
+            "name": "Yet another task",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "36a11bb1-566f-440f-955a-ac5f7eb66368": {
+            "id": "61b34d8f-e994-4c5c-8ee5-2ed4c2c68813",
+            "name": "Example",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "84b8922d-1876-485b-bd6c-2dc71f48e489": {
+            "id": "8ebab0f4-15b0-4a43-bdf1-f731022308c0",
+            "name": "Another example",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "20b9138c-8c13-4e4f-a436-2ceb7c9e7469": {
+            "id": "df050c14-7e44-4a79-a462-d638984d54c4",
+            "name": "Yet another example",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "15fd11dd-599e-4f91-91e7-0d666e7d6e0e": {
+            "id": "73390446-8283-4303-8b56-de910a3b8cd3",
+            "name": "Assignment 1",
+            "description": "",
+            "category": "5bb34fa1-25fc-46d1-bacd-36039b820297",
+            "status": true
+          },
+          "7effda36-4541-4c85-ac2a-eef02147910a": {
+            "id": "39fd2bb2-dcb7-446a-80de-6c883e3a8042",
+            "name": "Assignment 2",
+            "description": "",
+            "category": "5bb34fa1-25fc-46d1-bacd-36039b820297",
+            "status": true
+          },
+          "81761e7e-f4fa-4ebf-bd3d-637c406366cf": {
+            "id": "c861534e-9662-45f1-bc26-2a25c509b5c3",
+            "name": "Test",
+            "description": "",
+            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
+            "status": true
+          },
+          "6c7c93eb-9183-40c3-b69f-ce945723bc9c": {
+            "id": "008fed15-f048-4213-a789-c2af0bdde8cd",
+            "name": "Test2",
+            "description": "",
+            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
+            "status": true
+          },
+          "b986d472-4bc9-4ab4-b58a-6ac9a68cfdd2": {
+            "id": "3a33c1fd-e461-41a4-98a0-f22464793463",
+            "name": "Assignment 3",
+            "description": "",
+            "category": "e29f21f1-d6f1-4f05-900f-b685eaf577fa",
+            "status": false
+          },
+          "d2dd1c81-9149-4503-9418-ce52d21d2107": {
+            "id": "3b73c42e-3e6c-4da4-8831-89216a8554a7",
+            "name": "Test Example",
+            "description": "",
+            "category": "a76a1e39-4d45-45f7-851b-4e65934a4f6d",
+            "status": false
+          },
+          "97dad695-f7d5-43f4-b90e-47e02e68b6e2": {
+            "id": "e5e551be-6d9e-4a13-9efb-c6ad3659d4e8",
+            "name": "Tes3",
+            "description": "",
+            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
+            "status": false
+          },
+          "d193b772-9047-4ccf-b385-f305e907020e": {
+            "id": "13b14429-0584-435d-957a-28723899ff2f",
+            "name": "Test4",
+            "description": "",
+            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
+            "status": false
+          },
+          "841315cd-04eb-43f7-8f4b-e7e5788b2d37": {
+            "id": "a7fb8cae-326e-4a67-bab2-8c645e40fb5c",
+            "name": "Assignment 5",
+            "description": "",
+            "category": "5bb34fa1-25fc-46d1-bacd-36039b820297",
+            "status": false
+          },
+          "13a447c6-318f-4e87-80f2-c2dcb1f081c4": {
+            "id": "d24d5799-0754-4c54-b855-df0cba0e31a4",
+            "name": "Completed 3",
+            "description": "",
+            "category": null,
+            "status": true
           }
         },
         "categories": {
-          "1812ac4e-1021-4d72-8834-79d3182b97cc": {
-            "id": "1812ac4e-1021-4d72-8834-79d3182b97cc",
-            "name": "Groceries"
-          },
-          "05cdd09d-5db0-4ee8-8a92-db6f2dd06d72": {
-            "id": "05cdd09d-5db0-4ee8-8a92-db6f2dd06d72",
-            "name": "Chores"
-          },
           "5bb34fa1-25fc-46d1-bacd-36039b820297": {
             "id": "5bb34fa1-25fc-46d1-bacd-36039b820297",
             "name": "Homework"
@@ -106,6 +203,14 @@
           "8a99f759-c931-4bed-a6de-d0a0dc6acbb9": {
             "id": "8a99f759-c931-4bed-a6de-d0a0dc6acbb9",
             "name": "Yet another example"
+          },
+          "e29f21f1-d6f1-4f05-900f-b685eaf577fa": {
+            "id": "e29f21f1-d6f1-4f05-900f-b685eaf577fa",
+            "name": "Another example"
+          },
+          "e4de6ec5-4322-4cab-9b96-c02c015652ed": {
+            "id": "e4de6ec5-4322-4cab-9b96-c02c015652ed",
+            "name": "Something here"
           }
         }
       },
@@ -159,5 +264,9 @@
         "_id": "187764dd747-xdcbrxidk0hn6q"
       }
     }
+  ],
+  [
+    "webpack-hmr",
+    {}
   ]
 ]
