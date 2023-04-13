@@ -71,9 +71,21 @@
           }
         },
         "categories": {
-          "b6b67b19-4c7c-4ee4-9574-bbc7c2ce9158": {
-            "id": "b6b67b19-4c7c-4ee4-9574-bbc7c2ce9158",
+          "87e82b17-f06a-4058-bdad-2fa56edf16df": {
+            "id": "87e82b17-f06a-4058-bdad-2fa56edf16df",
+            "name": "Testing"
+          },
+          "9fff4224-1fe9-4914-92d8-9405e49c8497": {
+            "id": "9fff4224-1fe9-4914-92d8-9405e49c8497",
             "name": "Homework"
+          },
+          "96351b3a-ed4c-487c-b165-a4ffd35c835a": {
+            "id": "96351b3a-ed4c-487c-b165-a4ffd35c835a",
+            "name": "Groceries"
+          },
+          "021d4bf5-d7a1-4f23-885c-d3243bbbec9b": {
+            "id": "021d4bf5-d7a1-4f23-885c-d3243bbbec9b",
+            "name": "Music"
           }
         }
       }

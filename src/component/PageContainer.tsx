@@ -6,6 +6,7 @@ import Link from "next/link";
 import {router} from "next/client";
 import {useRouter} from "next/router";
 import {RedirectToSignIn, SignedIn, SignedOut, SignInButton, UserButton} from "@clerk/nextjs";
+import CategorySidebar from "@/component/CategorySidebar";
 
 interface PageContainerProps {
     children: ReactNode
@@ -72,7 +73,7 @@ export default function PageContainer(props: PageContainerProps) {
                     </div>
                     <div className={styles.pageContent}>
                         <aside className={`${styles.sidebar} ${expanded ? styles.active : ""}`}>
-                            Sidebar
+                            <CategorySidebar />
                         </aside>
                         <main className={styles.main}>
                             {props.children}

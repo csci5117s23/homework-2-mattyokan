@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 
 app.get('/categories', async (req, res) => {
     const userId = req?.user_token?.sub
-    if (!userId) res.json(error("You must be authenticated to use this endpoint."))
+    if (!userId) res.json({ error: "You must be authenticated to use this endpoint."})
     else {
         const db = await Datastore.open();
         res.json((await getUserData(db, userId)).categories)
@@ -117,6 +117,7 @@ app.post('/category/delete', async (req, res) => {
         res.json({error: "Must be authenticated"})
     } else {
         const id = req.body.id
+        console.log("Request is ", req)
         if(!id) res.json({error: "Missing category id"})
         else res.json(await deleteCategory(userId, id))
     }
