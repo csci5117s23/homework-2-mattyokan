@@ -1,0 +1,20 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/bg-pattern.webp');
+  background-repeat: repeat;
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255);
+    padding: 8px;
+    border-radius: 16px;
+    font-size: 1.8rem;
+  }
+}

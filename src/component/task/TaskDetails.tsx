@@ -1,5 +1,6 @@
 import {PropsWithChildren, useState} from "react";
 import {useCodeHooks} from "@/hook/useCodeHooks";
+import {useCategories} from "@/hook/useCategoryName";
 
 
 interface EditableInputProps {
@@ -42,6 +43,7 @@ export default function TaskDetails(props: TaskDetailsProps) {
 
     const { api } = useCodeHooks()
     const [task, setTask] = useState<Task>(props.task)
+    const [categories, setCategories] = useCategories()
 
     const updateField = async (name, value) => {
         const body = {}
@@ -63,6 +65,21 @@ export default function TaskDetails(props: TaskDetailsProps) {
             </div>
             <div>
                 <EditableInput type={`textarea`} value={task.description} onValueChange={(newValue) => updateField("description", newValue)} placeholder={"Description"} />
+            </div>
+            <div>
+                {categories && <>
+                    <select onChange={(e) => {
+                        e.preventDefault()
+                        const category = e.target.value
+                        updateField("category", category === "" ? null : category)
+                            .then()
+                    }} value={task.category ?? ""}>
+                        <option value={""}>None</option>
+                        {Object.values(categories).map(category => (
+                            <option key={category.id} value={category.id}>{category.name}</option>
+                        ))}
+                    </select>
+                </>}
             </div>
         </div>
     )

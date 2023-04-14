@@ -1,394 +1,83 @@
 [
   [
-    "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
-    {
-      "1877635b3d3-ytdu6dnu1s4xza": {
-        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
-        "tasks": {},
-        "categories": {},
-        "_id": "1877635b3d3-ytdu6dnu1s4xza"
-      },
-      "18776361326-ew04mgeobsbx6g": {
-        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
-        "tasks": {},
-        "categories": {},
-        "_id": "18776361326-ew04mgeobsbx6g"
-      }
-    }
-  ],
-  [
-    "_defaultkvspace",
-    {
-      "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt": {
-        "val": {
-          "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
-          "tasks": {},
-          "categories": {}
-        }
-      }
-    }
-  ],
-  [
     "users",
     {
-      "187763f7d52-jt52j51vxxjys3": {
-        "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
-        "tasks": {},
-        "categories": {},
-        "_id": "187763f7d52-jt52j51vxxjys3"
-      },
       "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt": {
-        "_id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
         "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
         "tasks": {
-          "b230dd7f-69bf-4884-9355-3cdb74e23ed9": {
-            "id": "b230dd7f-69bf-4884-9355-3cdb74e23ed9",
-            "name": "Example Task",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "875a143b-fc78-4009-a7b4-ed807b56b47c": {
-            "id": "875a143b-fc78-4009-a7b4-ed807b56b47c",
-            "name": "Example Task",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "5128c971-dfdf-4480-9c11-2adc5ca46111": {
-            "id": "5128c971-dfdf-4480-9c11-2adc5ca46111",
-            "name": "Example Task",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "d40e641a-f944-44f7-835b-26d787203742": {
-            "id": "d40e641a-f944-44f7-835b-26d787203742",
-            "name": "Example Task",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "6328097c-cf51-4bdb-9f6b-a63c56e428b1": {
-            "id": "6328097c-cf51-4bdb-9f6b-a63c56e428b1",
-            "name": "Another Task",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "1640f2fc-68cc-4f95-a70f-d2efa21ced46": {
-            "id": "1640f2fc-68cc-4f95-a70f-d2efa21ced46",
-            "name": "Yet another task",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "36a11bb1-566f-440f-955a-ac5f7eb66368": {
-            "id": "61b34d8f-e994-4c5c-8ee5-2ed4c2c68813",
-            "name": "Example",
+          "27dbb70f-7eb9-4dac-a5d3-3871d6ee4685": {
+            "id": "27dbb70f-7eb9-4dac-a5d3-3871d6ee4685",
+            "name": "Example 1",
             "description": "",
             "category": null,
             "status": false
           },
-          "84b8922d-1876-485b-bd6c-2dc71f48e489": {
-            "id": "8ebab0f4-15b0-4a43-bdf1-f731022308c0",
-            "name": "Another example",
+          "b9614b6b-3dfa-434c-bd63-f20227be1d28": {
+            "id": "b9614b6b-3dfa-434c-bd63-f20227be1d28",
+            "name": "Example 2",
             "description": "",
             "category": null,
             "status": false
           },
-          "20b9138c-8c13-4e4f-a436-2ceb7c9e7469": {
-            "id": "df050c14-7e44-4a79-a462-d638984d54c4",
-            "name": "Yet another example",
+          "266d8287-f398-4c19-830f-31a9ea89ce05": {
+            "id": "266d8287-f398-4c19-830f-31a9ea89ce05",
+            "name": "Example 3",
             "description": "",
             "category": null,
             "status": false
           },
-          "15fd11dd-599e-4f91-91e7-0d666e7d6e0e": {
-            "id": "73390446-8283-4303-8b56-de910a3b8cd3",
-            "name": "Assignment 1",
-            "description": "",
-            "category": "5bb34fa1-25fc-46d1-bacd-36039b820297",
-            "status": true
-          },
-          "7effda36-4541-4c85-ac2a-eef02147910a": {
-            "id": "39fd2bb2-dcb7-446a-80de-6c883e3a8042",
-            "name": "Assignment 2",
-            "description": "",
-            "category": "5bb34fa1-25fc-46d1-bacd-36039b820297",
-            "status": true
-          },
-          "81761e7e-f4fa-4ebf-bd3d-637c406366cf": {
-            "id": "c861534e-9662-45f1-bc26-2a25c509b5c3",
-            "name": "Test",
-            "description": "",
-            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
-            "status": true
-          },
-          "6c7c93eb-9183-40c3-b69f-ce945723bc9c": {
-            "id": "008fed15-f048-4213-a789-c2af0bdde8cd",
-            "name": "Test2",
-            "description": "",
-            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
-            "status": true
-          },
-          "b986d472-4bc9-4ab4-b58a-6ac9a68cfdd2": {
-            "id": "3a33c1fd-e461-41a4-98a0-f22464793463",
-            "name": "Assignment 3",
-            "description": "",
-            "category": "e29f21f1-d6f1-4f05-900f-b685eaf577fa",
-            "status": false
-          },
-          "d2dd1c81-9149-4503-9418-ce52d21d2107": {
-            "id": "3b73c42e-3e6c-4da4-8831-89216a8554a7",
-            "name": "Test Example",
-            "description": "",
-            "category": "a76a1e39-4d45-45f7-851b-4e65934a4f6d",
-            "status": false
-          },
-          "97dad695-f7d5-43f4-b90e-47e02e68b6e2": {
-            "id": "e5e551be-6d9e-4a13-9efb-c6ad3659d4e8",
-            "name": "Tes3",
-            "description": "",
-            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
-            "status": false
-          },
-          "d193b772-9047-4ccf-b385-f305e907020e": {
-            "id": "13b14429-0584-435d-957a-28723899ff2f",
-            "name": "Test4",
-            "description": "",
-            "category": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
-            "status": false
-          },
-          "841315cd-04eb-43f7-8f4b-e7e5788b2d37": {
-            "id": "a7fb8cae-326e-4a67-bab2-8c645e40fb5c",
-            "name": "Assignment 5",
-            "description": "",
-            "category": "5bb34fa1-25fc-46d1-bacd-36039b820297",
-            "status": false
-          },
-          "13a447c6-318f-4e87-80f2-c2dcb1f081c4": {
-            "id": "d24d5799-0754-4c54-b855-df0cba0e31a4",
-            "name": "Completed 3",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "73d0a87f-d697-4cc3-b130-cafc8ee41d19": {
-            "id": "73d0a87f-d697-4cc3-b130-cafc8ee41d19",
-            "name": "Assignment 6",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "f496e69d-a095-4410-a1eb-b076a7e050cd": {
-            "id": "f496e69d-a095-4410-a1eb-b076a7e050cd",
-            "name": "Assignment 6",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "5dce6e89-f9b4-4050-aa8c-96741977d831": {
-            "id": "5dce6e89-f9b4-4050-aa8c-96741977d831",
-            "name": "Assignment 6",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "4d23e160-c49e-42bf-8aac-8c771ad5f0c9": {
-            "id": "4d23e160-c49e-42bf-8aac-8c771ad5f0c9",
-            "name": "Assignment 7",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "e276d2a7-53e9-46c5-b239-1c0705a2a682": {
-            "id": "e276d2a7-53e9-46c5-b239-1c0705a2a682",
-            "name": "Assignment 6",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "a71750e9-0bb8-4ed0-8871-fe97166d70db": {
-            "id": "a71750e9-0bb8-4ed0-8871-fe97166d70db",
-            "name": "fhwle;rhfwe",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "669a52ae-1612-41de-bd19-0f2e41b7107a": {
-            "id": "669a52ae-1612-41de-bd19-0f2e41b7107a",
-            "name": "fewjl;fkqwjrp[o'i]",
-            "description": "",
-            "category": null,
-            "status": true
-          }
-        },
-        "categories": {
-          "32c0a3f2-d04c-4473-9068-6265172196ef": {
-            "id": "32c0a3f2-d04c-4473-9068-6265172196ef",
-            "name": "testing"
-          },
-          "a76a1e39-4d45-45f7-851b-4e65934a4f6d": {
-            "id": "a76a1e39-4d45-45f7-851b-4e65934a4f6d",
-            "name": "test 2"
-          },
-          "117b5c05-2e14-4d2e-bac3-c129a3f71b55": {
-            "id": "117b5c05-2e14-4d2e-bac3-c129a3f71b55",
-            "name": "Music"
-          },
-          "e0718577-7005-4625-b424-484080f73c94": {
-            "id": "e0718577-7005-4625-b424-484080f73c94",
-            "name": "example"
-          },
-          "c5c3e1de-3cfe-4da9-80a7-24f965a86a9b": {
-            "id": "c5c3e1de-3cfe-4da9-80a7-24f965a86a9b",
-            "name": "Another example"
-          },
-          "8a99f759-c931-4bed-a6de-d0a0dc6acbb9": {
-            "id": "8a99f759-c931-4bed-a6de-d0a0dc6acbb9",
-            "name": "Yet another example"
-          },
-          "e29f21f1-d6f1-4f05-900f-b685eaf577fa": {
-            "id": "e29f21f1-d6f1-4f05-900f-b685eaf577fa",
-            "name": "Another example"
-          },
-          "e4de6ec5-4322-4cab-9b96-c02c015652ed": {
-            "id": "e4de6ec5-4322-4cab-9b96-c02c015652ed",
-            "name": "Something here"
-          }
-        }
-      },
-      "1877b575c4a-nfvlsi9fjysp5b": {
-        "id": "user_2ONVj123TkDe2t0Gsbz30jKZL0o",
-        "tasks": {},
-        "categories": {
-          "eef5a043-004b-44f9-906d-1e097237575a": {
-            "id": "eef5a043-004b-44f9-906d-1e097237575a",
-            "name": "test"
-          }
-        },
-        "_id": "1877b575c4a-nfvlsi9fjysp5b"
-      },
-      "user_2ONVj123TkDe2t0Gsbz30jKZL0o": {
-        "id": "user_2ONVj123TkDe2t0Gsbz30jKZL0o",
-        "tasks": {},
-        "categories": {},
-        "_id": "user_2ONVj123TkDe2t0Gsbz30jKZL0o"
-      },
-      "user_2ONWb1oc4JnETvlRklTiyi2Qsod": {
-        "id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod",
-        "tasks": {
-          "9333bf3e-84d7-4014-b498-b7d93973a1b6": {
-            "id": "9333bf3e-84d7-4014-b498-b7d93973a1b6",
-            "name": "Complete HW2",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "5054bdfd-1f38-4a74-83ab-c382f3b26bf9": {
-            "id": "5054bdfd-1f38-4a74-83ab-c382f3b26bf9",
-            "name": "4511W Project",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "f82a38ca-64f0-4d70-b488-9ebb0b28b593": {
-            "id": "f82a38ca-64f0-4d70-b488-9ebb0b28b593",
-            "name": "Finish HW2",
-            "description": "",
-            "category": null,
-            "status": true
-          },
-          "1048691f-d40d-421a-b9f4-87d5ba6cc5a9": {
-            "id": "1048691f-d40d-421a-b9f4-87d5ba6cc5a9",
-            "name": "Finish 5117 HW2",
-            "description": "",
-            "category": "1680651c-0f93-4cad-94bc-19813ce6c486",
-            "status": false
-          },
-          "490d9616-5fda-4ec2-b074-dba0674c016f": {
-            "id": "490d9616-5fda-4ec2-b074-dba0674c016f",
-            "name": "4511W Project 2 Repop",
-            "description": "",
-            "category": "1680651c-0f93-4cad-94bc-19813ce6c486",
-            "status": false
-          },
-          "e92aca31-85d8-4fc5-95a3-c751d83004cd": {
-            "id": "e92aca31-85d8-4fc5-95a3-c751d83004cd",
-            "name": "Clean Bedroom",
+          "8a8f89d9-abad-4272-a36a-4c07e2ab9d45": {
+            "id": "8a8f89d9-abad-4272-a36a-4c07e2ab9d45",
+            "name": "Example 4",
             "description": "",
             "category": null,
             "status": false
           },
-          "69493b9d-beed-4ce2-a8d7-cad4aac62df6": {
-            "id": "69493b9d-beed-4ce2-a8d7-cad4aac62df6",
-            "name": "Crushed Tomatos",
+          "e265764e-136c-481c-a2e8-9afd85d1a68e": {
+            "id": "e265764e-136c-481c-a2e8-9afd85d1a68e",
+            "name": "Example 5",
             "description": "",
-            "category": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
+            "category": null,
             "status": false
           },
-          "039c2945-27f2-49c3-8887-fdb8d2ca9725": {
-            "id": "039c2945-27f2-49c3-8887-fdb8d2ca9725",
-            "name": "Spaghetti",
+          "becd9a91-25ad-4e3b-8263-a26e276b5ca9": {
+            "id": "becd9a91-25ad-4e3b-8263-a26e276b5ca9",
+            "name": "Example 6",
             "description": "",
-            "category": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
+            "category": null,
             "status": false
           },
-          "4dfb232f-a985-4bc3-8fe0-31136e8dd7af": {
-            "id": "4dfb232f-a985-4bc3-8fe0-31136e8dd7af",
-            "name": "Ground Beef",
+          "495f45d2-7810-432b-82f2-9dcecd4dc398": {
+            "id": "495f45d2-7810-432b-82f2-9dcecd4dc398",
+            "name": "Example 7",
             "description": "",
-            "category": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
+            "category": null,
+            "status": false
+          },
+          "13b37bca-ebb9-4f67-9cb8-e3aeb15508f9": {
+            "id": "13b37bca-ebb9-4f67-9cb8-e3aeb15508f9",
+            "name": "Example 8",
+            "description": "",
+            "category": null,
             "status": false
           }
         },
         "categories": {
-          "1680651c-0f93-4cad-94bc-19813ce6c486": {
-            "id": "1680651c-0f93-4cad-94bc-19813ce6c486",
-            "name": "Homework"
+          "db17ff05-980b-43e7-aff1-3c191875418d": {
+            "id": "db17ff05-980b-43e7-aff1-3c191875418d",
+            "name": "Examples 1-5"
           },
-          "20f59402-4dec-415c-b2fb-72dacae1d9d3": {
-            "id": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
-            "name": "Groceries"
-          },
-          "e96679df-7b5b-4431-a15b-86f685e2d9a4": {
-            "id": "e96679df-7b5b-4431-a15b-86f685e2d9a4",
-            "name": "Miscellaneous"
+          "8399875b-f71a-4367-89c9-b16c6ab3fcfb": {
+            "id": "8399875b-f71a-4367-89c9-b16c6ab3fcfb",
+            "name": "Examples 6-10"
           }
         },
-        "_id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod"
+        "_id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt"
       }
     }
   ],
   [
     "_dbmetadata",
-    {}
-  ],
-  [
-    "vierw",
-    {
-      "187764dce6f-nmm3y51gwawjng": {
-        "name": "Example Task",
-        "_id": "187764dce6f-nmm3y51gwawjng"
-      }
-    }
-  ],
-  [
-    "view",
-    {
-      "187764dd1a0-k7ui4lzouonslq": {
-        "name": "Example Task",
-        "_id": "187764dd1a0-k7ui4lzouonslq"
-      },
-      "187764dd747-xdcbrxidk0hn6q": {
-        "name": "Example Task",
-        "_id": "187764dd747-xdcbrxidk0hn6q"
-      }
-    }
-  ],
-  [
-    "webpack-hmr",
     {}
   ]
 ]

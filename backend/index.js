@@ -106,13 +106,13 @@ app.post('/updateTask', async (req, res) => {
         const taskId = body.id
         if (!taskId) res.json({error: "Missing taskId in body"})
         else res.json(await updateTask(userId, taskId, async (task) => {
-            if (body.name) {
+            if (typeof body.name !== "undefined") {
                 task.name = body.name
             }
-            if (body.description) {
+            if (typeof body.description !== "undefined") {
                 task.description = body.description
             }
-            if (body.category) {
+            if (typeof body.category !== "undefined") {
                 task.category = body.category
             }
             if (typeof body.status !== "undefined") {
