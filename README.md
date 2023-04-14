@@ -11,10 +11,10 @@ Please fill out all of the following sections to help us grade your submission:
 
 ## Link to Site
 
-<https://TODO.com/>
+<https://taskflow-hw2.netlify.app>
 
 ## Challenge Task
 
-* I started the challenge task: [yes/no]
-* I completed the challenge task: [yes/no]
+* I started the challenge task: yes
+* I completed the challenge task: yes
 
