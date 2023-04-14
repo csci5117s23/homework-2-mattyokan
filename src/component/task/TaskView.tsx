@@ -17,12 +17,12 @@ export default function TaskView(props: TasksProps) {
 
     useEffect(() => {
         const params = new URLSearchParams(props.filter ? {filter: JSON.stringify(props.filter)} : {})
-        console.log("Filter prop is ", props.filter)
         api.fetch("/tasks?" + params, async (res) => {
             const json = await res.json();
-            if (!json.error) {
-                console.log("Tasks are ", json)
-                setTasks(json)
+            if (!json.error && json.tasks) {
+                setTasks(json.tasks)
+            } else {
+                console.log("Encountered error while retrieving tasks: ", json)
             }
         })
     }, [...deps, props])
@@ -32,16 +32,17 @@ export default function TaskView(props: TasksProps) {
             <h1>{props.title}</h1>
             <div>
                 {tasks ? tasks.map(task => {
-                    console.log("Rendering task ", task)
                     return (
                     <TaskCard task={task} key={task.id} toggleComplete={() => {
                         const taskData = { ...task }
                         taskData.status = !task.status
                         api.fetch("/updateTask", async (res) => {
                             const json = await res.json()
-                            if(!json.error) {
-                                const newTasks = tasks.filter(t => t.id !== json.id)
+                            if(!json.error && json.task) {
+                                const newTasks = tasks.filter(t => t.id !== json.task.id)
                                 setTasks(newTasks)
+                            } else {
+                                console.log("Encountered error while updating task: ", json)
                             }
                         }, "POST", taskData)
                     }}/>

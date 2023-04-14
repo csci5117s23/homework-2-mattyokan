@@ -31,9 +31,11 @@ export default function TaskForm(props: TaskFormProps) {
 
         api.fetch("/create", async (res) => {
             const json = await res.json()
-            if(!json.error) {
-                const tasks = [...props.tasks, json]
+            if(!json.error && json.task) {
+                const tasks = [...props.tasks, json.task]
                 props.setTasks(tasks)
+            } else {
+                console.log("Encountered error while creating task: ", json)
             }
         }, "POST", taskBody)
     }

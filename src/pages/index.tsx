@@ -17,16 +17,6 @@ const RedirectToTasks = () => {
 }
 
 export default function Home() {
-    const { api, deps } = useCodeHooks()
-    const [state, setState] = useState()
-
-    useEffect(() => {
-        api.fetch("/", async (res) => {
-            const json = await res.json()
-            setState(json)
-        })
-            .then()
-    }, [...deps])
     return (
         <>
             <SignedIn>

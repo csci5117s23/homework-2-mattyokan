@@ -40,8 +40,18 @@ export function useCodeHooks(): ApiHook {
                         }
                         data.headers["Content-Type"] = "application/json"
                     }
-                    const res = await fetch(fullUrl(endpoint), data)
-                    await callback(res)
+                    try {
+                        const res = await fetch(fullUrl(endpoint), data)
+                        await callback(res)
+                    } catch (e) {
+                        console.log("Encountered error during fetch ", e)
+                        await callback(new Response(JSON.stringify({
+                            error: "Network error"
+                        }), {
+                            'status': 200,
+                            'statusText': "Simulated response"
+                        }))
+                    }
                 }
 
                 return fetchCallback()

@@ -61,8 +61,10 @@ export default function TaskDetails(props: TaskDetailsProps) {
 
         await api.fetch("/updateTask", async (res) => {
             const json = await res.json()
-            if(!json.error) {
-                setTask(json)
+            if(!json.error && json.task) {
+                setTask(json.task)
+            } else {
+                console.log("Encountered error while updating task: ", json)
             }
         }, "POST", body)
     }
@@ -92,7 +94,6 @@ export default function TaskDetails(props: TaskDetailsProps) {
                 </div>
                 {categories && <>
                     <select onChange={(e) => {
-                        e.preventDefault()
                         const category = e.target.value
                         updateField("category", category === "" ? null : category)
                             .then()

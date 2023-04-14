@@ -28,8 +28,10 @@ export default function CategorySidebar() {
         setNewCategory("")
         api.fetch("/category/create", async (res) => {
             const json = await res.json()
-            if(!json.error) {
-                setCategories(json)
+            if(!json.error && json.category) {
+                setCategories(json.category)
+            } else {
+                console.log("Encountered error while creating category: ", json)
             }
         }, "POST", {
             name: category

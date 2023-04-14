@@ -5,81 +5,18 @@
       "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt": {
         "id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt",
         "tasks": {
-          "27dbb70f-7eb9-4dac-a5d3-3871d6ee4685": {
-            "id": "27dbb70f-7eb9-4dac-a5d3-3871d6ee4685",
-            "name": "Example 1",
+          "81bdff7c-75f3-461c-8e58-81081b2ed3c8": {
+            "id": "81bdff7c-75f3-461c-8e58-81081b2ed3c8",
+            "name": "Test",
             "description": "",
             "category": null,
-            "status": false
-          },
-          "b9614b6b-3dfa-434c-bd63-f20227be1d28": {
-            "id": "b9614b6b-3dfa-434c-bd63-f20227be1d28",
-            "name": "Example 2",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "266d8287-f398-4c19-830f-31a9ea89ce05": {
-            "id": "266d8287-f398-4c19-830f-31a9ea89ce05",
-            "name": "Example 3",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "8a8f89d9-abad-4272-a36a-4c07e2ab9d45": {
-            "id": "8a8f89d9-abad-4272-a36a-4c07e2ab9d45",
-            "name": "Example 4",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "e265764e-136c-481c-a2e8-9afd85d1a68e": {
-            "id": "e265764e-136c-481c-a2e8-9afd85d1a68e",
-            "name": "Example 5",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "becd9a91-25ad-4e3b-8263-a26e276b5ca9": {
-            "id": "becd9a91-25ad-4e3b-8263-a26e276b5ca9",
-            "name": "Example 6",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "495f45d2-7810-432b-82f2-9dcecd4dc398": {
-            "id": "495f45d2-7810-432b-82f2-9dcecd4dc398",
-            "name": "Example 7",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "13b37bca-ebb9-4f67-9cb8-e3aeb15508f9": {
-            "id": "13b37bca-ebb9-4f67-9cb8-e3aeb15508f9",
-            "name": "Example 8",
-            "description": "",
-            "category": null,
-            "status": false
-          },
-          "eb1f2407-db3d-481b-97c5-69e3935243c2": {
-            "id": "eb1f2407-db3d-481b-97c5-69e3935243c2",
-            "name": "Example task",
-            "description": "Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description ",
-            "category": "db17ff05-980b-43e7-aff1-3c191875418d",
-            "status": false
-          },
-          "f5d0651d-6b7c-4e0e-b020-03faa9d40ab7": {
-            "id": "f5d0651d-6b7c-4e0e-b020-03faa9d40ab7",
-            "name": "Another example",
-            "description": "",
-            "category": "db17ff05-980b-43e7-aff1-3c191875418d",
             "status": false
           }
         },
         "categories": {
-          "549c553f-3f8b-4c8f-a8ab-879c53e0827a": {
-            "id": "549c553f-3f8b-4c8f-a8ab-879c53e0827a",
-            "name": "Test"
+          "3e538ec0-7aea-48d6-8ed2-91ce9059b1c7": {
+            "id": "3e538ec0-7aea-48d6-8ed2-91ce9059b1c7",
+            "name": "Example"
           }
         },
         "_id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt"

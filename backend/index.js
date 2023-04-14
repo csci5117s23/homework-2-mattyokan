@@ -44,7 +44,7 @@ app.get('/categories', async (req, res) => {
     if (!userId) res.json({error: "You must be authenticated to use this endpoint."})
     else {
         const db = await Datastore.open();
-        res.json((await getUserData(db, userId)).categories)
+        res.json({ categories: (await getUserData(db, userId)).categories })
     }
 })
 
@@ -63,7 +63,7 @@ app.post('/create', async (req, res) => {
 
     try {
         const result = await createTask(userId, name, description, category, status)
-        res.json(result)
+        res.json({ task: result })
     } catch (e) {
         console.log("Exception ", e)
     }
@@ -80,7 +80,7 @@ app.get("/task", async (req, res) => {
             res.json({error: "Missing task ID"})
         } else {
             const results = await getTaskById(userId, id)
-            res.json(results)
+            res.json({ task: results })
         }
     }
 })
@@ -93,7 +93,8 @@ app.get('/tasks', async (req, res) => {
         res.json(err)
     } else {
         const results = await queryTasks(userId, filter)
-        res.json(results)
+        console.log("Have results ", results, " from tasks query")
+        res.json({ tasks: results })
     }
 })
 
@@ -105,7 +106,7 @@ app.post('/updateTask', async (req, res) => {
         const body = req.body
         const taskId = body.id
         if (!taskId) res.json({error: "Missing taskId in body"})
-        else res.json(await updateTask(userId, taskId, async (task) => {
+        else res.json({ task: await updateTask(userId, taskId, async (task) => {
             if (typeof body.name !== "undefined") {
                 task.name = body.name
             }
@@ -119,7 +120,7 @@ app.post('/updateTask', async (req, res) => {
                 task.status = body.status
             }
             return task
-        }))
+        }) })
     }
 })
 
@@ -130,7 +131,7 @@ app.post('/category/create', async (req, res) => {
     } else {
         const name = req.body.name
         if (!name) res.json({error: "Missing category name"})
-        else res.json(await createCategory(userId, name))
+        else res.json({ category: await createCategory(userId, name)})
     }
 })
 
@@ -141,7 +142,7 @@ app.post('/category/delete', async (req, res) => {
     } else {
         const id = req.body.id
         if (!id) res.json({error: "Missing category id"})
-        else res.json(await deleteCategory(userId, id))
+        else res.json({ category: await deleteCategory(userId, id) })
     }
 })
 

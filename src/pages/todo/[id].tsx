@@ -17,10 +17,10 @@ export default function TodoView() {
                 id: id as string
             }), async (res) => {
                 const json = await res.json()
-                if(!json.error) {
-                    setTask(json)
+                if(!json.error && json.task) {
+                    setTask(json.task)
                 } else {
-                    console.log("Error while loading task: ", json.error)
+                    console.log("Error while loading task: ", json)
                 }
             })
         }

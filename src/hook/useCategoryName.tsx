@@ -9,7 +9,11 @@ export function useCategories(): [any, ((value: (((prevState: object) => object)
     useEffect(() => {
         api.fetch("/categories", async (res) => {
             const json = await res.json()
-            setCategories(json)
+            if(!json.error && json.categories) {
+                setCategories(json.categories)
+            } else {
+                console.log("Encountered error or missing categories during categories retrieval:", json)
+            }
         })
             .then()
     }, [...deps])

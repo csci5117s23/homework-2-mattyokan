@@ -29,6 +29,7 @@ export async function updateTask(userId, taskId, updateClosure) {
         return {error: "No task found with that ID."}
     } else {
         data.tasks[taskId] = await updateClosure(task)
+        await setUserData(db, userId, data)
         return data.tasks[taskId]
     }
 }
@@ -104,22 +105,21 @@ async function getOrDefault(db, key, closure) {
 }
 
 export async function getUserData(db, userId) {
-    return await getOrDefault(db, userId, () => ({
-        id: userId,
-        tasks: {},
-        categories: {}
-    }))
+    const result = await db.get(userId)
+    if(result) {
+        return JSON.parse(result)
+    } else {
+        console.log("No data for userId ", userId)
+        return {
+            id: userId,
+            tasks: {},
+            categories: {}
+        }
+    }
 }
 
 async function setUserData(db, userId, data) {
-    try {
-        await db.replaceOne('users', data.id, data);
-    } catch(e) {
-        const result = await db.insertOne('users', {
-            ...data,
-            _id: userId
-        })
-    }
+    await db.set(data.id, JSON.stringify(data))
 }
 
 async function updateUserData(db, userId, closure) {
