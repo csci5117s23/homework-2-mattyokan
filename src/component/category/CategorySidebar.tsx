@@ -14,7 +14,12 @@ export default function CategorySidebar() {
     const [categories, setCategories] = useCategories();
     const [newCategory, setNewCategory] = useState<string>("")
     const {asPath} = useRouter();
-    const basePath = asPath.split("/")[1]
+
+    let basePath = asPath.split("/")[1]
+    // Special case: If a user is viewing a task, the sidebar links should go back to the /todos/ view
+    if(basePath === "todo") {
+        basePath = "todos"
+    }
 
 
     const addNewCategory = (e) => {

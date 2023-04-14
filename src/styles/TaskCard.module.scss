@@ -6,7 +6,8 @@
   align-items: center;
   background: $theme-primary-container;
   padding: 8px;
-  max-width: 100%;
+  max-width: 60em;
+  margin: 8px;
 
 
   .status {
@@ -18,12 +19,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     .name {
       font-weight: 600;
     }
     .description {
+      max-width: 35em;
+      max-height: 18.4px;
+      overflow: hidden;
       text-overflow: ellipsis;
     }
   }

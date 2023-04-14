@@ -4,7 +4,7 @@ import TaskView from "@/component/task/TaskView";
 export default function AllTodos() {
     return (
         <PageContainer>
-            <TaskView title={`Incomplete Tasks`} filter={{
+            <TaskView title={`All Incomplete Tasks`} filter={{
                 requiredStatus: false
             }}/>
         </PageContainer>

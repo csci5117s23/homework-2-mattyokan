@@ -1,11 +1,19 @@
 import {Datastore} from 'codehooks-js'
 import {randomUUID} from "crypto";
 
+export async function getTaskById(userId, taskId) {
+    const db = await Datastore.open();
+    const data = await getUserData(db, userId)
+    if(data.tasks) {
+        return data.tasks[taskId]
+    } else {
+        return null
+    }
+}
+
 export async function queryTasks(userId, query) {
     const db = await Datastore.open();
     const data = await getUserData(db, userId)
-
-    console.log("Querying tasks with query ", query)
 
     return Array.from(Object.values(data.tasks))
         .filter((task) => {

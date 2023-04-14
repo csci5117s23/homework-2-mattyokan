@@ -291,17 +291,72 @@
             "name": "4511W Project",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "f82a38ca-64f0-4d70-b488-9ebb0b28b593": {
             "id": "f82a38ca-64f0-4d70-b488-9ebb0b28b593",
             "name": "Finish HW2",
             "description": "",
             "category": null,
+            "status": true
+          },
+          "1048691f-d40d-421a-b9f4-87d5ba6cc5a9": {
+            "id": "1048691f-d40d-421a-b9f4-87d5ba6cc5a9",
+            "name": "Finish 5117 HW2",
+            "description": "",
+            "category": "1680651c-0f93-4cad-94bc-19813ce6c486",
+            "status": false
+          },
+          "490d9616-5fda-4ec2-b074-dba0674c016f": {
+            "id": "490d9616-5fda-4ec2-b074-dba0674c016f",
+            "name": "4511W Project 2 Repop",
+            "description": "",
+            "category": "1680651c-0f93-4cad-94bc-19813ce6c486",
+            "status": false
+          },
+          "e92aca31-85d8-4fc5-95a3-c751d83004cd": {
+            "id": "e92aca31-85d8-4fc5-95a3-c751d83004cd",
+            "name": "Clean Bedroom",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "69493b9d-beed-4ce2-a8d7-cad4aac62df6": {
+            "id": "69493b9d-beed-4ce2-a8d7-cad4aac62df6",
+            "name": "Crushed Tomatos",
+            "description": "",
+            "category": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
+            "status": false
+          },
+          "039c2945-27f2-49c3-8887-fdb8d2ca9725": {
+            "id": "039c2945-27f2-49c3-8887-fdb8d2ca9725",
+            "name": "Spaghetti",
+            "description": "",
+            "category": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
+            "status": false
+          },
+          "4dfb232f-a985-4bc3-8fe0-31136e8dd7af": {
+            "id": "4dfb232f-a985-4bc3-8fe0-31136e8dd7af",
+            "name": "Ground Beef",
+            "description": "",
+            "category": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
             "status": false
           }
         },
-        "categories": {},
+        "categories": {
+          "1680651c-0f93-4cad-94bc-19813ce6c486": {
+            "id": "1680651c-0f93-4cad-94bc-19813ce6c486",
+            "name": "Homework"
+          },
+          "20f59402-4dec-415c-b2fb-72dacae1d9d3": {
+            "id": "20f59402-4dec-415c-b2fb-72dacae1d9d3",
+            "name": "Groceries"
+          },
+          "e96679df-7b5b-4431-a15b-86f685e2d9a4": {
+            "id": "e96679df-7b5b-4431-a15b-86f685e2d9a4",
+            "name": "Miscellaneous"
+          }
+        },
         "_id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod"
       }
     }

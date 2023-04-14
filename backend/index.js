@@ -5,7 +5,15 @@
 import {app, Datastore} from 'codehooks-js'
 import {crudlify} from 'codehooks-crudlify'
 import jwtDecode from 'jwt-decode';
-import {createCategory, createTask, deleteCategory, getUserData, queryTasks, updateTask} from "./controller/data";
+import {
+    createCategory,
+    createTask,
+    deleteCategory,
+    getTaskById,
+    getUserData,
+    queryTasks,
+    updateTask
+} from "./controller/data";
 
 // source: https://github.com/csci5117s23/Tech-Stack-2-Kluver-Demo/blob/8e85dd14f06ae24ae0db2ee44237bf0de111d5fe/backend/index.js#L23
 // This can largely be copy-pasted, it just grabs the authorization token and parses it, stashing it on the request.
@@ -33,7 +41,7 @@ app.get('/', (req, res) => {
 
 app.get('/categories', async (req, res) => {
     const userId = req?.user_token?.sub
-    if (!userId) res.json({ error: "You must be authenticated to use this endpoint."})
+    if (!userId) res.json({error: "You must be authenticated to use this endpoint."})
     else {
         const db = await Datastore.open();
         res.json((await getUserData(db, userId)).categories)
@@ -47,7 +55,7 @@ app.post('/create', async (req, res) => {
     if (!userId) res.json(error("You must be authenticated to use this endpoint."))
 
     const name = req?.body?.name
-    if(!name) res.json(error("Missing task name"))
+    if (!name) res.json(error("Missing task name"))
 
     const description = req?.body?.description ?? ""
     const category = req?.body?.category ?? null
@@ -58,6 +66,22 @@ app.post('/create', async (req, res) => {
         res.json(result)
     } catch (e) {
         console.log("Exception ", e)
+    }
+})
+
+app.get("/task", async (req, res) => {
+    const userId = req?.user_token?.sub
+    if (!userId) {
+        const err = {error: "Must be authenticated"}
+        res.json(err)
+    } else {
+        const id = req.query.id
+        if (!id) {
+            res.json({error: "Missing task ID"})
+        } else {
+            const results = await getTaskById(userId, id)
+            res.json(results)
+        }
     }
 })
 
@@ -80,18 +104,18 @@ app.post('/updateTask', async (req, res) => {
     } else {
         const body = req.body
         const taskId = body.id
-        if(!taskId) res.json({error: "Missing taskId in body"})
+        if (!taskId) res.json({error: "Missing taskId in body"})
         else res.json(await updateTask(userId, taskId, async (task) => {
-            if(body.name) {
+            if (body.name) {
                 task.name = body.name
             }
-            if(body.description) {
+            if (body.description) {
                 task.description = body.description
             }
-            if(body.category) {
+            if (body.category) {
                 task.category = body.category
             }
-            if(typeof body.status !== "undefined") {
+            if (typeof body.status !== "undefined") {
                 task.status = body.status
             }
             return task
@@ -105,7 +129,7 @@ app.post('/category/create', async (req, res) => {
         res.json({error: "Must be authenticated"})
     } else {
         const name = req.body.name
-        if(!name) res.json({error: "Missing category name"})
+        if (!name) res.json({error: "Missing category name"})
         else res.json(await createCategory(userId, name))
     }
 })
@@ -116,7 +140,7 @@ app.post('/category/delete', async (req, res) => {
         res.json({error: "Must be authenticated"})
     } else {
         const id = req.body.id
-        if(!id) res.json({error: "Missing category id"})
+        if (!id) res.json({error: "Missing category id"})
         else res.json(await deleteCategory(userId, id))
     }
 })
