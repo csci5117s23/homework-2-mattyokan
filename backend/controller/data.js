@@ -22,7 +22,7 @@ export async function updateTask(userId, taskId, updateClosure) {
         return {error: "No task found with that ID."}
     } else {
         data.tasks[taskId] = await updateClosure(task)
-        return { success: "Task updated." }
+        return data.tasks[taskId]
     }
 }
 

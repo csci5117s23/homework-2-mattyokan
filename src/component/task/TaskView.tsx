@@ -31,20 +31,21 @@ export default function TaskView(props: TasksProps) {
         <>
             <h1>{props.title}</h1>
             <div>
-                {tasks ? tasks.map(task => (
+                {tasks ? tasks.map(task => {
+                    console.log("Rendering task ", task)
+                    return (
                     <TaskCard task={task} key={task.id} toggleComplete={() => {
                         const taskData = { ...task }
                         taskData.status = !task.status
                         api.fetch("/updateTask", async (res) => {
                             const json = await res.json()
                             if(!json.error) {
-                                const newTasks = tasks.filter(t => t.id !== task.id)
-                                newTasks.push(json)
+                                const newTasks = tasks.filter(t => t.id !== json.id)
                                 setTasks(newTasks)
                             }
                         }, "POST", taskData)
                     }}/>
-                )) : <Skeleton count={5}/>}
+                )}) : <Skeleton count={5}/>}
             </div>
             {props.filter?.requiredStatus !== true && (<div>
                 <TaskForm tasks={tasks} setTasks={setTasks} filter={props.filter}/>

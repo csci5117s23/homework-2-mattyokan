@@ -62,7 +62,6 @@ app.post('/create', async (req, res) => {
 })
 
 app.get('/tasks', async (req, res) => {
-    console.log("Tasks req is ", req)
     const filter = (req.query.filter) ? JSON.parse(req.query.filter) : {}
     const userId = req?.user_token?.sub
     if (!userId) {
@@ -75,7 +74,6 @@ app.get('/tasks', async (req, res) => {
 })
 
 app.post('/updateTask', async (req, res) => {
-    console.log("Body is ", req.body)
     const userId = req?.user_token?.sub
     if (!userId) {
         res.json({error: "Must be authenticated"})
@@ -93,7 +91,7 @@ app.post('/updateTask', async (req, res) => {
             if(body.category) {
                 task.category = body.category
             }
-            if(body.status) {
+            if(typeof body.status !== "undefined") {
                 task.status = body.status
             }
             return task
@@ -118,7 +116,6 @@ app.post('/category/delete', async (req, res) => {
         res.json({error: "Must be authenticated"})
     } else {
         const id = req.body.id
-        console.log("Request is ", req)
         if(!id) res.json({error: "Missing category id"})
         else res.json(await deleteCategory(userId, id))
     }

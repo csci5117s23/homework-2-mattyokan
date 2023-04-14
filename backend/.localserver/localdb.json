@@ -46,42 +46,42 @@
             "name": "Example Task",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "875a143b-fc78-4009-a7b4-ed807b56b47c": {
             "id": "875a143b-fc78-4009-a7b4-ed807b56b47c",
             "name": "Example Task",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "5128c971-dfdf-4480-9c11-2adc5ca46111": {
             "id": "5128c971-dfdf-4480-9c11-2adc5ca46111",
             "name": "Example Task",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "d40e641a-f944-44f7-835b-26d787203742": {
             "id": "d40e641a-f944-44f7-835b-26d787203742",
             "name": "Example Task",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "6328097c-cf51-4bdb-9f6b-a63c56e428b1": {
             "id": "6328097c-cf51-4bdb-9f6b-a63c56e428b1",
             "name": "Another Task",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "1640f2fc-68cc-4f95-a70f-d2efa21ced46": {
             "id": "1640f2fc-68cc-4f95-a70f-d2efa21ced46",
             "name": "Yet another task",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "36a11bb1-566f-440f-955a-ac5f7eb66368": {
             "id": "61b34d8f-e994-4c5c-8ee5-2ed4c2c68813",
@@ -193,14 +193,35 @@
             "name": "Assignment 6",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
           },
           "4d23e160-c49e-42bf-8aac-8c771ad5f0c9": {
             "id": "4d23e160-c49e-42bf-8aac-8c771ad5f0c9",
             "name": "Assignment 7",
             "description": "",
             "category": null,
-            "status": false
+            "status": true
+          },
+          "e276d2a7-53e9-46c5-b239-1c0705a2a682": {
+            "id": "e276d2a7-53e9-46c5-b239-1c0705a2a682",
+            "name": "Assignment 6",
+            "description": "",
+            "category": null,
+            "status": true
+          },
+          "a71750e9-0bb8-4ed0-8871-fe97166d70db": {
+            "id": "a71750e9-0bb8-4ed0-8871-fe97166d70db",
+            "name": "fhwle;rhfwe",
+            "description": "",
+            "category": null,
+            "status": true
+          },
+          "669a52ae-1612-41de-bd19-0f2e41b7107a": {
+            "id": "669a52ae-1612-41de-bd19-0f2e41b7107a",
+            "name": "fewjl;fkqwjrp[o'i]",
+            "description": "",
+            "category": null,
+            "status": true
           }
         },
         "categories": {
@@ -257,7 +278,29 @@
       },
       "user_2ONWb1oc4JnETvlRklTiyi2Qsod": {
         "id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod",
-        "tasks": {},
+        "tasks": {
+          "9333bf3e-84d7-4014-b498-b7d93973a1b6": {
+            "id": "9333bf3e-84d7-4014-b498-b7d93973a1b6",
+            "name": "Complete HW2",
+            "description": "",
+            "category": null,
+            "status": true
+          },
+          "5054bdfd-1f38-4a74-83ab-c382f3b26bf9": {
+            "id": "5054bdfd-1f38-4a74-83ab-c382f3b26bf9",
+            "name": "4511W Project",
+            "description": "",
+            "category": null,
+            "status": false
+          },
+          "f82a38ca-64f0-4d70-b488-9ebb0b28b593": {
+            "id": "f82a38ca-64f0-4d70-b488-9ebb0b28b593",
+            "name": "Finish HW2",
+            "description": "",
+            "category": null,
+            "status": false
+          }
+        },
         "categories": {},
         "_id": "user_2ONWb1oc4JnETvlRklTiyi2Qsod"
       }
