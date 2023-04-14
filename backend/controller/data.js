@@ -24,7 +24,6 @@ export async function queryTasks(userId, query) {
 export async function updateTask(userId, taskId, updateClosure) {
     const db = await Datastore.open();
     const data = await getUserData(db, userId);
-    console.log("User data is ", data)
     const task = data.tasks ? data.tasks[taskId] : null
     if(!task) {
         return {error: "No task found with that ID."}
@@ -70,7 +69,6 @@ export async function createCategory(userId, name) {
             id: id,
             name: name,
         }
-        console.log("Setting categories to ", data.categories)
         return data
     })
     return (await getUserData(db, userId)).categories
@@ -123,9 +121,6 @@ async function getOrDefault(db, key, closure) {
     try {
         return await db.getOne('users', key)
     } catch (e) {
-        console.log("Get failed: ", e)
-        const data = closure()
-        console.log("Returning user data ", data)
         return closure()
     }
 }
