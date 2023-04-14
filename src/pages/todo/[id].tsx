@@ -14,7 +14,7 @@ export default function TodoView() {
     useEffect(() => {
         if(id) {
             api.fetch("/task?" + new URLSearchParams({
-                id: id
+                id: id as string
             }), async (res) => {
                 const json = await res.json()
                 if(!json.error) {

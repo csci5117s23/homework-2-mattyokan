@@ -8,7 +8,7 @@ export default function DoneByCategoryView() {
     const router = useRouter();
     const { category } = router.query
     const [categories] = useCategories()
-    const currentCategory: Category | null = categories ? categories[category] : null
+    const currentCategory: Category | null = categories ? categories[category as string] : null
     const name = currentCategory?.name ?? "Loading"
     return (
         <PageContainer>

@@ -98,7 +98,7 @@ export default function TaskDetails(props: TaskDetailsProps) {
                             .then()
                     }} value={task.category ?? ""}>
                         <option value={""}>None</option>
-                        {Object.values(categories).map(category => (
+                        {Object.values(categories).map((category: Category) => (
                             <option key={category.id} value={category.id}>{category.name}</option>
                         ))}
                     </select>

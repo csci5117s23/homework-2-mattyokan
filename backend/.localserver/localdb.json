@@ -64,7 +64,7 @@
           "eb1f2407-db3d-481b-97c5-69e3935243c2": {
             "id": "eb1f2407-db3d-481b-97c5-69e3935243c2",
             "name": "Example task",
-            "description": "",
+            "description": "Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description Long description ",
             "category": "db17ff05-980b-43e7-aff1-3c191875418d",
             "status": false
           },
@@ -77,13 +77,9 @@
           }
         },
         "categories": {
-          "db17ff05-980b-43e7-aff1-3c191875418d": {
-            "id": "db17ff05-980b-43e7-aff1-3c191875418d",
-            "name": "Examples 1-5"
-          },
-          "8399875b-f71a-4367-89c9-b16c6ab3fcfb": {
-            "id": "8399875b-f71a-4367-89c9-b16c6ab3fcfb",
-            "name": "Examples 6-10"
+          "549c553f-3f8b-4c8f-a8ab-879c53e0827a": {
+            "id": "549c553f-3f8b-4c8f-a8ab-879c53e0827a",
+            "name": "Test"
           }
         },
         "_id": "user_2OF5gyiqOBNRcVLy2QxRrmj4rWt"

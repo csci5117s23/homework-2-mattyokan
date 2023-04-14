@@ -22,7 +22,7 @@ export default function CategorySidebar() {
     }
 
 
-    const addNewCategory = (e) => {
+    const addNewCategory = (e: any) => {
         e.preventDefault()
         const category = newCategory
         setNewCategory("")
@@ -43,7 +43,7 @@ export default function CategorySidebar() {
             {(categories && !categories.error) ?
                 (<>
                         <div className={styles.categories}>
-                            {Object.values(categories).map((category) => (
+                            {Object.values(categories).map((category: Category) => (
                                 <CategoryEntry key={category.id} category={category} basePath={basePath} remove={() => {
                                     const newCategories = {
                                         ...categories
