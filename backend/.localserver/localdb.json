@@ -60,6 +60,20 @@
             "description": "",
             "category": null,
             "status": false
+          },
+          "eb1f2407-db3d-481b-97c5-69e3935243c2": {
+            "id": "eb1f2407-db3d-481b-97c5-69e3935243c2",
+            "name": "Example task",
+            "description": "",
+            "category": "db17ff05-980b-43e7-aff1-3c191875418d",
+            "status": false
+          },
+          "f5d0651d-6b7c-4e0e-b020-03faa9d40ab7": {
+            "id": "f5d0651d-6b7c-4e0e-b020-03faa9d40ab7",
+            "name": "Another example",
+            "description": "",
+            "category": "db17ff05-980b-43e7-aff1-3c191875418d",
+            "status": false
           }
         },
         "categories": {

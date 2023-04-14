@@ -50,9 +50,6 @@ export default function PageContainer(props: PageContainerProps) {
                                               key={entry.path} href={entry.path}>{entry.name}</Link>)
                             })}
                         </div>
-                        <div className={styles.search}>
-                            Search
-                        </div>
                         <div className={styles.user}>
                             <SignedIn>
 

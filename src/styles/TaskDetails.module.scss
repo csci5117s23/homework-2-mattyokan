@@ -1,0 +1,70 @@
+@import "theme";
+
+.task {
+
+  display: flex;
+  flex-direction: column;
+  background: $theme-primary-container;
+  padding: 32px;
+  border-radius: $theme-border-radius;
+
+  .name {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+
+    span {
+      display: inline-block;
+      border: 1px solid $theme-secondary;
+      cursor: pointer;
+      padding: 4px;
+    }
+  }
+
+  .description {
+    margin-bottom: 16px;
+
+    span {
+      display: inline-block;
+      border: 1px solid $theme-secondary;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      width: 100%;
+    }
+  }
+
+  .category {
+    margin-bottom: 16px;
+  }
+
+  .header {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .tutorial {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 30em;
+    background-color: $theme-tertiary-container;
+    color: $theme-on-tertiary-container;
+    border-radius: $theme-border-radius;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 16px;
+    margin-bottom: 8px;
+
+    .icon {
+      font-size: 2rem;
+      color: $theme-on-tertiary-container;
+      margin-right: 4px;
+    }
+
+  }
+}

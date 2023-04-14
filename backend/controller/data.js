@@ -17,7 +17,7 @@ export async function queryTasks(userId, query) {
 
     return Array.from(Object.values(data.tasks))
         .filter((task) => {
-            return matchCategory(query, task) && matchStatus(query, task) && matchSearchQuery(query, task)
+            return matchCategory(query, task) && matchStatus(query, task)
         })
 }
 
@@ -92,28 +92,6 @@ function matchStatus(query, task) {
         return true
     } else {
         return query.requiredStatus === task.status;
-    }
-}
-
-/**
- * TODO: Time-permitting, make this less janky as the index is created each search
- * (very slow) and the actual similarity metrics are not used. It should work,
- * but it's not at all optimized.
- */
-function matchSearchQuery(query, task) {
-    if(query.query) {
-        const idx = lunr(function () {
-            this.field("title")
-            this.field("body")
-            this.add({
-                "title": task.name,
-                "body": task.description
-            })
-        })
-        const result = idx.search(query.query)
-        return result.length() > 0
-    } else {
-        return true
     }
 }
 

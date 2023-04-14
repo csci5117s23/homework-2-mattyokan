@@ -1,6 +1,8 @@
 import {PropsWithChildren, useState} from "react";
 import {useCodeHooks} from "@/hook/useCodeHooks";
 import {useCategories} from "@/hook/useCategoryName";
+import styles from '@/styles/TaskDetails.module.scss';
+import {FaLightbulb} from "react-icons/fa";
 
 
 interface EditableInputProps {
@@ -23,14 +25,21 @@ const EditableInput = (props: EditableInputProps) => {
 
     return (
         editing ?
-            (<input type={props.type} value={entry} placeholder={props.placeholder} onChange={(e) => {
+            (props.type === "textarea" ? (<textarea rows={10} value={entry} placeholder={props.placeholder} onChange={(e) => {
                 e.preventDefault()
                 setEntry(e.target.value)
             }} onKeyDown={(e) => {
                 if(e.key === "Enter") {
                     onWrite(e)
                 }
-            }} onBlur={onWrite}/>)
+            }} onBlur={onWrite}/>) : (<input type={props.type} value={entry} placeholder={props.placeholder} onChange={(e) => {
+                e.preventDefault()
+                setEntry(e.target.value)
+            }} onKeyDown={(e) => {
+                if(e.key === "Enter") {
+                    onWrite(e)
+                }
+            }} onBlur={onWrite}/>))
             : (<span onClick={() => setEditing(true)}>{entry.length > 0 ? entry : props.placeholder}</span>)
     )
 }
@@ -59,14 +68,28 @@ export default function TaskDetails(props: TaskDetailsProps) {
     }
 
     return (
-        <div>
-            <div>
+        <div className={styles.task}>
+            <div className={styles.tutorial}>
+                <div className={styles.icon}>
+                    <FaLightbulb />
+                </div>
+                <div>
+                    Tip: Click the name or description to edit it! All changes are auto-saved.
+                </div>
+            </div>
+            <div className={styles.name}>
                 <EditableInput type={`text`} value={task.name} onValueChange={(newValue) => updateField("name", newValue)} />
             </div>
-            <div>
+            <div className={styles.description}>
+                <div className={styles.header}>
+                    Description
+                </div>
                 <EditableInput type={`textarea`} value={task.description} onValueChange={(newValue) => updateField("description", newValue)} placeholder={"Description"} />
             </div>
-            <div>
+            <div className={styles.category}>
+                <div className={styles.header}>
+                    Category
+                </div>
                 {categories && <>
                     <select onChange={(e) => {
                         e.preventDefault()

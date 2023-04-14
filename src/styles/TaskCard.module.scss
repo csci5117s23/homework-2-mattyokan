@@ -8,6 +8,7 @@
   padding: 8px;
   max-width: 60em;
   margin: 8px;
+  border-radius: $theme-border-radius;
 
 
   .status {
@@ -24,6 +25,7 @@
     .name {
       font-weight: 600;
     }
+
     div {
       max-width: 35em;
       max-height: 18.4px;
